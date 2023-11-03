@@ -1,0 +1,84 @@
+{
+  "name": "root",
+  "isFolder": true,
+  "children": [
+    {
+      "name": "content",
+      "isFolder": true,
+      "children": [
+        {
+          "name": "temp",
+          "isFolder": true,
+          "children": [
+            {
+              "name": "button.mov",
+              "isFolder": false,
+              "content": {
+                "Key": "content/temp/button.mov",
+                "LastModified": "2023-10-06T12:29:52.000Z",
+                "ETag": "\"711473da87bacfdd16b709ada070ab58\"",
+                "Size": "24406280",
+                "Owner": {
+                  "ID": "1251712147",
+                  "DisplayName": "1251712147"
+                },
+                "StorageClass": "STANDARD"
+              }
+            },
+            {
+              "name": "node.mov",
+              "isFolder": false,
+              "content": {
+                "Key": "content/temp/node.mov",
+                "LastModified": "2023-10-06T12:29:54.000Z",
+                "ETag": "\"aa578245fc62ef3d02b9c8df88bbfb48\"",
+                "Size": "6968730",
+                "Owner": {
+                  "ID": "1251712147",
+                  "DisplayName": "1251712147"
+                },
+                "StorageClass": "STANDARD"
+              }
+            }
+          ]
+        },
+        {
+          "name": "test",
+          "isFolder": true,
+          "children": [
+            {
+              "name": "50MiB",
+              "isFolder": false,
+              "content": {
+                "Key": "content/test/50MiB",
+                "LastModified": "2023-08-30T03:30:27.000Z",
+                "ETag": "\"25e317773f308e446cc84c503a6d1f85\"",
+                "Size": "52428800",
+                "Owner": {
+                  "ID": "1251712147",
+                  "DisplayName": "1251712147"
+                },
+                "StorageClass": "STANDARD"
+              }
+            },
+            {
+              "name": "progit.pdf",
+              "isFolder": false,
+              "content": {
+                "Key": "content/test/progit.pdf",
+                "LastModified": "2023-08-30T03:30:23.000Z",
+                "ETag": "\"4399a7785b6be61f7d89f58a001c0f37\"",
+                "Size": "20511974",
+                "Owner": {
+                  "ID": "1251712147",
+                  "DisplayName": "1251712147"
+                },
+                "StorageClass": "STANDARD"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
