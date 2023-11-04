@@ -1,8 +1,6 @@
 <script>
   import root_node from "./files.json";
 
-  const DOWNURL = "https://netdisk.anqi.eu.org";
-
   let current_nodes;
 
   (() => {
@@ -111,7 +109,7 @@
             back(current_nodes.length - 1 - i);
           }}
           type="button"
-          class="text-base hover:underline {current_nodes.length - 1 === i ? 'text-black' : ''}">{node.name}</button
+          class="text-base hover:underline {current_nodes.length - 1 === i ? 'text-black' : ''} text-ellipsis max-w-full whitespace-nowrap overflow-hidden">{node.name}</button
         >
       {/each}
     </div>
@@ -146,12 +144,12 @@
         {/each}
       {:else}
         <div class="flex flex-col gap-2 px-4">
-          <a href="{DOWNURL}/{current_nodes[current_nodes.length - 1].content.Key}" class="text-blue-600 underline hover:decoration-inherit decoration-blue-300 text-2xl w-fit text-ellipsis max-w-full whitespace-nowrap">{current_nodes[current_nodes.length - 1].name}</a>
+          <a href="{root_node.url}/{current_nodes[current_nodes.length - 1].content.Key}" class="text-blue-600 underline hover:decoration-inherit decoration-blue-300 text-2xl w-fit text-ellipsis max-w-full whitespace-nowrap overflow-hidden">{current_nodes[current_nodes.length - 1].name}</a>
           <p class="text-sm border border-gray-400 rounded-full px-3 py-1 w-fit text-ellipsis max-w-full whitespace-nowrap text-gray-800 overflow-hidden">储存: {current_nodes[current_nodes.length - 1].content.StorageClass}</p>
           <p class="text-sm border border-gray-400 rounded-full px-3 py-1 w-fit text-ellipsis max-w-full whitespace-nowrap text-gray-800 overflow-hidden">大小: {current_nodes[current_nodes.length - 1].content.Size} Bytes</p>
           <p class="text-sm border border-gray-400 rounded-full px-3 py-1 w-fit text-ellipsis max-w-full whitespace-nowrap text-gray-800 overflow-hidden">上次修改时间: {current_nodes[current_nodes.length - 1].content.LastModified}</p>
           <p class="text-sm border border-gray-400 rounded-full px-3 py-1 w-fit text-ellipsis max-w-full whitespace-nowrap text-gray-800 overflow-hidden">ETag: {current_nodes[current_nodes.length - 1].content.ETag}</p>
-          <p class="text-sm border border-gray-400 rounded-full px-3 py-1 w-fit text-ellipsis max-w-full whitespace-nowrap text-gray-800 overflow-hidden">文件直链: {DOWNURL}/{current_nodes[current_nodes.length - 1].content.Key}</p>
+          <p class="text-sm border border-gray-400 rounded-full px-3 py-1 w-fit text-ellipsis max-w-full whitespace-nowrap text-gray-800 overflow-hidden">文件直链: {root_node.url}/{current_nodes[current_nodes.length - 1].content.Key}</p>
         </div>
       {/if}
     {:else}
